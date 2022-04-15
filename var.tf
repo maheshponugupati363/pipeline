@@ -4,17 +4,23 @@ variable "rgname" {
 variable "loc" {
   default = "west us"
 }
-
 variable "vnetname" {
-  default = "vnet3"
+   type = string
+description = "this is virtual network name"
+  default = "vent3"
 }
-variable "vnetadd" {
-  default = ["12.0.0.0/16"]
-
+variable "vnetaddr" {
+  type = string
+description = "this is virtual network address"
+  default =  ["10.0.0.0/16"]
 }
 variable "subnetname" {
-  default = "subnet1"
+  type = list
+description = "this is subnet"
+  default =  subnet1
 }
-variable "subnetadd" {
-  default = ["12.0.0.0/24"]
+variable "subnetaddr" {
+  type = list
+description = "this is subnet address "
+  default = ["10.0.1.0/24"]
 }
